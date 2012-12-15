@@ -1,0 +1,255 @@
+Dec 15 18:48:27 symfony [info] {sfPatternRouting} Match route "mailing_list" (/mailing_list) for /mailing_list with parameters array (  'module' => 'mailing_list',  'action' => 'index',)
+Dec 15 18:48:27 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 15 18:48:27 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 15 18:48:27 symfony [info] {mailing_listActions} Call "mailing_listActions->executeIndex()"
+Dec 15 18:48:45 symfony [info] {sfPatternRouting} Match route "mailing_list" (/mailing_list) for /mailing_list with parameters array (  'module' => 'mailing_list',  'action' => 'index',)
+Dec 15 18:48:45 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 15 18:48:45 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 15 18:48:45 symfony [info] {mailing_listActions} Call "mailing_listActions->executeIndex()"
+Dec 15 18:48:58 symfony [info] {sfPatternRouting} Match route "mailing_list" (/mailing_list) for /mailing_list with parameters array (  'module' => 'mailing_list',  'action' => 'index',)
+Dec 15 18:48:58 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 15 18:48:58 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 15 18:48:58 symfony [info] {mailing_listActions} Call "mailing_listActions->executeIndex()"
+Dec 15 18:48:58 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemclient/apps/frontend/modules/mailing_list/templates/indexSuccess.php"
+Dec 15 18:48:58 symfony [info] {sfPHPView} Decorate content with "/home/aman/www/sf.pl/systemclient/apps/frontend/templates/layout.php"
+Dec 15 18:48:58 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemclient/apps/frontend/templates/layout.php"
+Dec 15 18:48:58 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 15 18:48:58 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 15 18:48:58 symfony [info] {sfWebDebugLogger} Configuration 14.29 ms (10)
+Dec 15 18:48:58 symfony [info] {sfWebDebugLogger} Factories 33.16 ms (1)
+Dec 15 18:48:58 symfony [info] {sfWebDebugLogger} Action "mailing_list/index" 0.45 ms (1)
+Dec 15 18:48:58 symfony [info] {sfWebDebugLogger} View "Success" for "mailing_list/index" 42.52 ms (1)
+Dec 15 18:48:58 symfony [info] {sfWebResponse} Send content (27582 o)
+Dec 15 18:49:25 symfony [info] {sfPatternRouting} Match route "mailing_list" (/mailing_list) for /mailing_list with parameters array (  'module' => 'mailing_list',  'action' => 'index',)
+Dec 15 18:49:25 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 15 18:49:25 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 15 18:49:25 symfony [info] {mailing_listActions} Call "mailing_listActions->executeIndex()"
+Dec 15 18:49:43 symfony [info] {sfPatternRouting} Match route "mailing_list" (/mailing_list) for /mailing_list with parameters array (  'module' => 'mailing_list',  'action' => 'index',)
+Dec 15 18:49:43 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 15 18:49:43 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 15 18:49:43 symfony [info] {mailing_listActions} Call "mailing_listActions->executeIndex()"
+Dec 15 18:49:43 symfony [notice] {sfWebDebugLogger}  Notice at /home/aman/www/sf.pl/systemclient/lib/API/Auth.class.php on line 21 (Undefined property: SmAuth::$api_sercet)
+Dec 15 18:49:43 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemclient/apps/frontend/modules/mailing_list/templates/indexSuccess.php"
+Dec 15 18:49:43 symfony [info] {sfPHPView} Decorate content with "/home/aman/www/sf.pl/systemclient/apps/frontend/templates/layout.php"
+Dec 15 18:49:43 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemclient/apps/frontend/templates/layout.php"
+Dec 15 18:49:43 symfony [warning] {sfWebDebugLogger}  Warning at /home/aman/www/sf.pl/systemclient/lib/vendor/symfony/lib/response/sfWebResponse.class.php on line 336 (Cannot modify header information - headers already sent by (output started at /home/aman/www/sf.pl/systemclient/lib/API/Auth.class.php:21))
+Dec 15 18:49:43 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 15 18:49:43 symfony [warning] {sfWebDebugLogger}  Warning at /home/aman/www/sf.pl/systemclient/lib/vendor/symfony/lib/response/sfWebResponse.class.php on line 357 (Cannot modify header information - headers already sent by (output started at /home/aman/www/sf.pl/systemclient/lib/API/Auth.class.php:21))
+Dec 15 18:49:43 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 15 18:49:43 symfony [info] {sfWebDebugLogger} Configuration 1.60 ms (9)
+Dec 15 18:49:43 symfony [info] {sfWebDebugLogger} Factories 36.31 ms (1)
+Dec 15 18:49:43 symfony [info] {sfWebDebugLogger} Action "mailing_list/index" 0.74 ms (1)
+Dec 15 18:49:43 symfony [info] {sfWebDebugLogger} View "Success" for "mailing_list/index" 11.81 ms (1)
+Dec 15 18:49:43 symfony [info] {sfWebResponse} Send content (27579 o)
+Dec 15 18:50:01 symfony [info] {sfPatternRouting} Match route "mailing_list" (/mailing_list) for /mailing_list with parameters array (  'module' => 'mailing_list',  'action' => 'index',)
+Dec 15 18:50:01 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 15 18:50:01 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 15 18:50:01 symfony [info] {mailing_listActions} Call "mailing_listActions->executeIndex()"
+Dec 15 18:50:01 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemclient/apps/frontend/modules/mailing_list/templates/indexSuccess.php"
+Dec 15 18:50:01 symfony [info] {sfPHPView} Decorate content with "/home/aman/www/sf.pl/systemclient/apps/frontend/templates/layout.php"
+Dec 15 18:50:01 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemclient/apps/frontend/templates/layout.php"
+Dec 15 18:50:01 symfony [warning] {sfWebDebugLogger}  Warning at /home/aman/www/sf.pl/systemclient/lib/vendor/symfony/lib/response/sfWebResponse.class.php on line 336 (Cannot modify header information - headers already sent by (output started at /home/aman/www/sf.pl/systemclient/apps/frontend/modules/mailing_list/actions/actions.class.php:22))
+Dec 15 18:50:01 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 15 18:50:01 symfony [warning] {sfWebDebugLogger}  Warning at /home/aman/www/sf.pl/systemclient/lib/vendor/symfony/lib/response/sfWebResponse.class.php on line 357 (Cannot modify header information - headers already sent by (output started at /home/aman/www/sf.pl/systemclient/apps/frontend/modules/mailing_list/actions/actions.class.php:22))
+Dec 15 18:50:01 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 15 18:50:01 symfony [info] {sfWebDebugLogger} Configuration 1.47 ms (9)
+Dec 15 18:50:01 symfony [info] {sfWebDebugLogger} Factories 35.43 ms (1)
+Dec 15 18:50:01 symfony [info] {sfWebDebugLogger} Action "mailing_list/index" 0.50 ms (1)
+Dec 15 18:50:01 symfony [info] {sfWebDebugLogger} View "Success" for "mailing_list/index" 11.98 ms (1)
+Dec 15 18:50:01 symfony [info] {sfWebResponse} Send content (27579 o)
+Dec 15 18:51:33 symfony [info] {sfPatternRouting} Match route "mailing_list" (/mailing_list) for /mailing_list with parameters array (  'module' => 'mailing_list',  'action' => 'index',)
+Dec 15 18:51:33 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 15 18:51:33 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 15 18:51:33 symfony [info] {mailing_listActions} Call "mailing_listActions->executeIndex()"
+Dec 15 18:51:33 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemclient/apps/frontend/modules/mailing_list/templates/indexSuccess.php"
+Dec 15 18:51:33 symfony [info] {sfPHPView} Decorate content with "/home/aman/www/sf.pl/systemclient/apps/frontend/templates/layout.php"
+Dec 15 18:51:33 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemclient/apps/frontend/templates/layout.php"
+Dec 15 18:51:33 symfony [warning] {sfWebDebugLogger}  Warning at /home/aman/www/sf.pl/systemclient/lib/vendor/symfony/lib/response/sfWebResponse.class.php on line 336 (Cannot modify header information - headers already sent by (output started at /home/aman/www/sf.pl/systemclient/apps/frontend/modules/mailing_list/actions/actions.class.php:22))
+Dec 15 18:51:33 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 15 18:51:33 symfony [warning] {sfWebDebugLogger}  Warning at /home/aman/www/sf.pl/systemclient/lib/vendor/symfony/lib/response/sfWebResponse.class.php on line 357 (Cannot modify header information - headers already sent by (output started at /home/aman/www/sf.pl/systemclient/apps/frontend/modules/mailing_list/actions/actions.class.php:22))
+Dec 15 18:51:33 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 15 18:51:33 symfony [info] {sfWebDebugLogger} Configuration 1.65 ms (9)
+Dec 15 18:51:33 symfony [info] {sfWebDebugLogger} Factories 38.24 ms (1)
+Dec 15 18:51:33 symfony [info] {sfWebDebugLogger} Action "mailing_list/index" 1.02 ms (1)
+Dec 15 18:51:33 symfony [info] {sfWebDebugLogger} View "Success" for "mailing_list/index" 12.73 ms (1)
+Dec 15 18:51:33 symfony [info] {sfWebResponse} Send content (27580 o)
+Dec 15 18:51:34 symfony [info] {sfPatternRouting} Match route "mailing_list" (/mailing_list) for /mailing_list with parameters array (  'module' => 'mailing_list',  'action' => 'index',)
+Dec 15 18:51:34 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 15 18:51:34 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 15 18:51:34 symfony [info] {mailing_listActions} Call "mailing_listActions->executeIndex()"
+Dec 15 18:51:34 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemclient/apps/frontend/modules/mailing_list/templates/indexSuccess.php"
+Dec 15 18:51:34 symfony [info] {sfPHPView} Decorate content with "/home/aman/www/sf.pl/systemclient/apps/frontend/templates/layout.php"
+Dec 15 18:51:34 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemclient/apps/frontend/templates/layout.php"
+Dec 15 18:51:34 symfony [warning] {sfWebDebugLogger}  Warning at /home/aman/www/sf.pl/systemclient/lib/vendor/symfony/lib/response/sfWebResponse.class.php on line 336 (Cannot modify header information - headers already sent by (output started at /home/aman/www/sf.pl/systemclient/apps/frontend/modules/mailing_list/actions/actions.class.php:22))
+Dec 15 18:51:34 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 15 18:51:34 symfony [warning] {sfWebDebugLogger}  Warning at /home/aman/www/sf.pl/systemclient/lib/vendor/symfony/lib/response/sfWebResponse.class.php on line 357 (Cannot modify header information - headers already sent by (output started at /home/aman/www/sf.pl/systemclient/apps/frontend/modules/mailing_list/actions/actions.class.php:22))
+Dec 15 18:51:34 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 15 18:51:34 symfony [info] {sfWebDebugLogger} Configuration 1.91 ms (9)
+Dec 15 18:51:34 symfony [info] {sfWebDebugLogger} Factories 34.40 ms (1)
+Dec 15 18:51:34 symfony [info] {sfWebDebugLogger} Action "mailing_list/index" 0.77 ms (1)
+Dec 15 18:51:34 symfony [info] {sfWebDebugLogger} View "Success" for "mailing_list/index" 11.38 ms (1)
+Dec 15 18:51:34 symfony [info] {sfWebResponse} Send content (27579 o)
+Dec 15 18:51:39 symfony [info] {sfPatternRouting} Match route "mailing_list" (/mailing_list) for /mailing_list with parameters array (  'module' => 'mailing_list',  'action' => 'index',)
+Dec 15 18:51:39 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 15 18:51:39 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 15 18:51:39 symfony [info] {mailing_listActions} Call "mailing_listActions->executeIndex()"
+Dec 15 18:51:39 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemclient/apps/frontend/modules/mailing_list/templates/indexSuccess.php"
+Dec 15 18:51:39 symfony [info] {sfPHPView} Decorate content with "/home/aman/www/sf.pl/systemclient/apps/frontend/templates/layout.php"
+Dec 15 18:51:39 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemclient/apps/frontend/templates/layout.php"
+Dec 15 18:51:39 symfony [warning] {sfWebDebugLogger}  Warning at /home/aman/www/sf.pl/systemclient/lib/vendor/symfony/lib/response/sfWebResponse.class.php on line 336 (Cannot modify header information - headers already sent by (output started at /home/aman/www/sf.pl/systemclient/apps/frontend/modules/mailing_list/actions/actions.class.php:26))
+Dec 15 18:51:39 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 15 18:51:39 symfony [warning] {sfWebDebugLogger}  Warning at /home/aman/www/sf.pl/systemclient/lib/vendor/symfony/lib/response/sfWebResponse.class.php on line 357 (Cannot modify header information - headers already sent by (output started at /home/aman/www/sf.pl/systemclient/apps/frontend/modules/mailing_list/actions/actions.class.php:26))
+Dec 15 18:51:39 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 15 18:51:39 symfony [info] {sfWebDebugLogger} Configuration 1.57 ms (9)
+Dec 15 18:51:39 symfony [info] {sfWebDebugLogger} Factories 36.59 ms (1)
+Dec 15 18:51:39 symfony [info] {sfWebDebugLogger} Action "mailing_list/index" 0.79 ms (1)
+Dec 15 18:51:39 symfony [info] {sfWebDebugLogger} View "Success" for "mailing_list/index" 11.70 ms (1)
+Dec 15 18:51:39 symfony [info] {sfWebResponse} Send content (27579 o)
+Dec 15 18:51:40 symfony [info] {sfPatternRouting} Match route "mailing_list" (/mailing_list) for /mailing_list with parameters array (  'module' => 'mailing_list',  'action' => 'index',)
+Dec 15 18:51:40 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 15 18:51:40 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 15 18:51:40 symfony [info] {mailing_listActions} Call "mailing_listActions->executeIndex()"
+Dec 15 18:51:40 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemclient/apps/frontend/modules/mailing_list/templates/indexSuccess.php"
+Dec 15 18:51:40 symfony [info] {sfPHPView} Decorate content with "/home/aman/www/sf.pl/systemclient/apps/frontend/templates/layout.php"
+Dec 15 18:51:40 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemclient/apps/frontend/templates/layout.php"
+Dec 15 18:51:40 symfony [warning] {sfWebDebugLogger}  Warning at /home/aman/www/sf.pl/systemclient/lib/vendor/symfony/lib/response/sfWebResponse.class.php on line 336 (Cannot modify header information - headers already sent by (output started at /home/aman/www/sf.pl/systemclient/apps/frontend/modules/mailing_list/actions/actions.class.php:26))
+Dec 15 18:51:40 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 15 18:51:40 symfony [warning] {sfWebDebugLogger}  Warning at /home/aman/www/sf.pl/systemclient/lib/vendor/symfony/lib/response/sfWebResponse.class.php on line 357 (Cannot modify header information - headers already sent by (output started at /home/aman/www/sf.pl/systemclient/apps/frontend/modules/mailing_list/actions/actions.class.php:26))
+Dec 15 18:51:40 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 15 18:51:40 symfony [info] {sfWebDebugLogger} Configuration 1.70 ms (9)
+Dec 15 18:51:40 symfony [info] {sfWebDebugLogger} Factories 37.11 ms (1)
+Dec 15 18:51:40 symfony [info] {sfWebDebugLogger} Action "mailing_list/index" 0.78 ms (1)
+Dec 15 18:51:40 symfony [info] {sfWebDebugLogger} View "Success" for "mailing_list/index" 12.03 ms (1)
+Dec 15 18:51:40 symfony [info] {sfWebResponse} Send content (27580 o)
+Dec 15 19:15:52 symfony [info] {sfPatternRouting} Match route "mailing_list" (/mailing_list) for /mailing_list with parameters array (  'module' => 'mailing_list',  'action' => 'index',)
+Dec 15 19:15:52 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 15 19:15:52 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 15 19:15:52 symfony [info] {mailing_listActions} Call "mailing_listActions->executeIndex()"
+Dec 15 19:17:08 symfony [info] {sfPatternRouting} Match route "mailing_list" (/mailing_list) for /mailing_list with parameters array (  'module' => 'mailing_list',  'action' => 'index',)
+Dec 15 19:17:08 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 15 19:17:08 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 15 19:17:08 symfony [info] {mailing_listActions} Call "mailing_listActions->executeIndex()"
+Dec 15 19:17:16 symfony [info] {sfPatternRouting} Match route "mailing_list" (/mailing_list) for /mailing_list with parameters array (  'module' => 'mailing_list',  'action' => 'index',)
+Dec 15 19:17:16 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 15 19:17:16 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 15 19:17:16 symfony [info] {mailing_listActions} Call "mailing_listActions->executeIndex()"
+Dec 15 19:23:12 symfony [info] {sfPatternRouting} Match route "mailing_list" (/mailing_list) for /mailing_list with parameters array (  'module' => 'mailing_list',  'action' => 'index',)
+Dec 15 19:23:12 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 15 19:23:12 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 15 19:23:12 symfony [info] {mailing_listActions} Call "mailing_listActions->executeIndex()"
+Dec 15 19:23:12 symfony [notice] {sfWebDebugLogger}  Notice at /home/aman/www/sf.pl/systemclient/lib/API/API.class.php on line 57 (Undefined property: SmRestAPI::$_host)
+Dec 15 19:23:12 symfony [warning] {sfWebDebugLogger}  Warning at /home/aman/www/sf.pl/systemclient/lib/API/Auth.class.php on line 36 (md5() expects parameter 1 to be string, array given)
+Dec 15 19:23:12 symfony [notice] {sfWebDebugLogger}  Notice at /home/aman/www/sf.pl/systemclient/lib/API/API.class.php on line 62 (Undefined property: SmRestAPI::$_headers)
+Dec 15 19:23:59 symfony [info] {sfPatternRouting} Match route "mailing_list" (/mailing_list) for /mailing_list with parameters array (  'module' => 'mailing_list',  'action' => 'index',)
+Dec 15 19:23:59 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 15 19:23:59 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 15 19:23:59 symfony [info] {mailing_listActions} Call "mailing_listActions->executeIndex()"
+Dec 15 19:23:59 symfony [notice] {sfWebDebugLogger}  Notice at /home/aman/www/sf.pl/systemclient/lib/API/API.class.php on line 57 (Undefined property: SmRestAPI::$_host)
+Dec 15 19:23:59 symfony [warning] {sfWebDebugLogger}  Warning at /home/aman/www/sf.pl/systemclient/lib/API/Auth.class.php on line 36 (md5() expects parameter 1 to be string, array given)
+Dec 15 19:23:59 symfony [notice] {sfWebDebugLogger}  Notice at /home/aman/www/sf.pl/systemclient/lib/API/API.class.php on line 62 (Undefined property: SmRestAPI::$_headers)
+Dec 15 19:23:59 symfony [info] {sfPatternRouting} Match route "mailing_list" (/mailing_list) for /mailing_list with parameters array (  'module' => 'mailing_list',  'action' => 'index',)
+Dec 15 19:23:59 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 15 19:23:59 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 15 19:23:59 symfony [info] {mailing_listActions} Call "mailing_listActions->executeIndex()"
+Dec 15 19:23:59 symfony [notice] {sfWebDebugLogger}  Notice at /home/aman/www/sf.pl/systemclient/lib/API/API.class.php on line 57 (Undefined property: SmRestAPI::$_host)
+Dec 15 19:23:59 symfony [warning] {sfWebDebugLogger}  Warning at /home/aman/www/sf.pl/systemclient/lib/API/Auth.class.php on line 36 (md5() expects parameter 1 to be string, array given)
+Dec 15 19:23:59 symfony [notice] {sfWebDebugLogger}  Notice at /home/aman/www/sf.pl/systemclient/lib/API/API.class.php on line 62 (Undefined property: SmRestAPI::$_headers)
+Dec 15 19:24:00 symfony [info] {sfPatternRouting} Match route "mailing_list" (/mailing_list) for /mailing_list with parameters array (  'module' => 'mailing_list',  'action' => 'index',)
+Dec 15 19:24:00 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 15 19:24:00 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 15 19:24:00 symfony [info] {mailing_listActions} Call "mailing_listActions->executeIndex()"
+Dec 15 19:24:00 symfony [notice] {sfWebDebugLogger}  Notice at /home/aman/www/sf.pl/systemclient/lib/API/API.class.php on line 57 (Undefined property: SmRestAPI::$_host)
+Dec 15 19:24:00 symfony [warning] {sfWebDebugLogger}  Warning at /home/aman/www/sf.pl/systemclient/lib/API/Auth.class.php on line 36 (md5() expects parameter 1 to be string, array given)
+Dec 15 19:24:00 symfony [notice] {sfWebDebugLogger}  Notice at /home/aman/www/sf.pl/systemclient/lib/API/API.class.php on line 62 (Undefined property: SmRestAPI::$_headers)
+Dec 15 19:28:11 symfony [info] {sfPatternRouting} Match route "mailing_list" (/mailing_list) for /mailing_list with parameters array (  'module' => 'mailing_list',  'action' => 'index',)
+Dec 15 19:28:11 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 15 19:28:11 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 15 19:28:11 symfony [info] {mailing_listActions} Call "mailing_listActions->executeIndex()"
+Dec 15 19:28:11 symfony [warning] {sfWebDebugLogger}  Warning at /home/aman/www/sf.pl/systemclient/lib/API/Auth.class.php on line 36 (md5() expects parameter 1 to be string, array given)
+Dec 15 19:28:11 symfony [notice] {sfWebDebugLogger}  Notice at /home/aman/www/sf.pl/systemclient/lib/API/API.class.php on line 62 (Undefined property: SmRestAPI::$_headers)
+Dec 15 19:28:24 symfony [info] {sfPatternRouting} Match route "mailing_list" (/mailing_list) for /mailing_list with parameters array (  'module' => 'mailing_list',  'action' => 'index',)
+Dec 15 19:28:24 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 15 19:28:24 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 15 19:28:24 symfony [info] {mailing_listActions} Call "mailing_listActions->executeIndex()"
+Dec 15 19:28:24 symfony [notice] {sfWebDebugLogger}  Notice at /home/aman/www/sf.pl/systemclient/lib/API/API.class.php on line 62 (Undefined property: SmRestAPI::$_headers)
+Dec 15 19:28:48 symfony [info] {sfPatternRouting} Match route "mailing_list" (/mailing_list) for /mailing_list with parameters array (  'module' => 'mailing_list',  'action' => 'index',)
+Dec 15 19:28:48 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 15 19:28:48 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 15 19:28:48 symfony [info] {mailing_listActions} Call "mailing_listActions->executeIndex()"
+Dec 15 19:31:02 symfony [info] {sfPatternRouting} Match route "mailing_list" (/mailing_list) for /mailing_list with parameters array (  'module' => 'mailing_list',  'action' => 'index',)
+Dec 15 19:31:02 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 15 19:31:02 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 15 19:31:02 symfony [info] {mailing_listActions} Call "mailing_listActions->executeIndex()"
+Dec 15 19:31:33 symfony [info] {sfPatternRouting} Match route "mailing_list" (/mailing_list) for /mailing_list with parameters array (  'module' => 'mailing_list',  'action' => 'index',)
+Dec 15 19:31:33 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 15 19:31:33 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 15 19:31:33 symfony [info] {mailing_listActions} Call "mailing_listActions->executeIndex()"
+Dec 15 19:31:33 symfony [err] {sfWebDebugLogger}  Strict notice at /home/aman/www/sf.pl/systemclient/lib/API/module/MailingList.class.php on line 12 (Non-static method SmModule::getAuth() should not be called statically)
+Dec 15 19:31:46 symfony [info] {sfPatternRouting} Match route "mailing_list" (/mailing_list) for /mailing_list with parameters array (  'module' => 'mailing_list',  'action' => 'index',)
+Dec 15 19:31:46 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 15 19:31:46 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 15 19:31:46 symfony [info] {mailing_listActions} Call "mailing_listActions->executeIndex()"
+Dec 15 19:33:50 symfony [info] {sfPatternRouting} Match route "mailing_list" (/mailing_list) for /mailing_list with parameters array (  'module' => 'mailing_list',  'action' => 'index',)
+Dec 15 19:33:50 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 15 19:33:50 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 15 19:33:50 symfony [info] {mailing_listActions} Call "mailing_listActions->executeIndex()"
+Dec 15 19:33:51 symfony [info] {sfPatternRouting} Match route "mailing_list" (/mailing_list) for /mailing_list with parameters array (  'module' => 'mailing_list',  'action' => 'index',)
+Dec 15 19:33:51 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 15 19:33:51 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 15 19:33:51 symfony [info] {mailing_listActions} Call "mailing_listActions->executeIndex()"
+Dec 15 19:37:37 symfony [info] {sfPatternRouting} Match route "mailing_list" (/mailing_list) for /mailing_list with parameters array (  'module' => 'mailing_list',  'action' => 'index',)
+Dec 15 19:37:37 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 15 19:37:37 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 15 19:37:37 symfony [info] {mailing_listActions} Call "mailing_listActions->executeIndex()"
+Dec 15 19:37:38 symfony [info] {sfPatternRouting} Match route "mailing_list" (/mailing_list) for /mailing_list with parameters array (  'module' => 'mailing_list',  'action' => 'index',)
+Dec 15 19:37:38 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 15 19:37:38 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 15 19:37:38 symfony [info] {mailing_listActions} Call "mailing_listActions->executeIndex()"
+Dec 15 19:37:38 symfony [info] {sfPatternRouting} Match route "mailing_list" (/mailing_list) for /mailing_list with parameters array (  'module' => 'mailing_list',  'action' => 'index',)
+Dec 15 19:37:38 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 15 19:37:38 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 15 19:37:38 symfony [info] {mailing_listActions} Call "mailing_listActions->executeIndex()"
+Dec 15 19:37:38 symfony [info] {sfPatternRouting} Match route "mailing_list" (/mailing_list) for /mailing_list with parameters array (  'module' => 'mailing_list',  'action' => 'index',)
+Dec 15 19:37:38 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 15 19:37:38 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 15 19:37:38 symfony [info] {mailing_listActions} Call "mailing_listActions->executeIndex()"
+Dec 15 19:37:39 symfony [info] {sfPatternRouting} Match route "mailing_list" (/mailing_list) for /mailing_list with parameters array (  'module' => 'mailing_list',  'action' => 'index',)
+Dec 15 19:37:39 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 15 19:37:39 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 15 19:37:39 symfony [info] {mailing_listActions} Call "mailing_listActions->executeIndex()"
+Dec 15 19:38:20 symfony [info] {sfPatternRouting} Match route "mailing_list" (/mailing_list) for /mailing_list with parameters array (  'module' => 'mailing_list',  'action' => 'index',)
+Dec 15 19:38:20 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 15 19:38:20 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 15 19:38:20 symfony [info] {mailing_listActions} Call "mailing_listActions->executeIndex()"
+Dec 15 19:38:51 symfony [info] {sfPatternRouting} Match route "mailing_list" (/mailing_list) for /mailing_list with parameters array (  'module' => 'mailing_list',  'action' => 'index',)
+Dec 15 19:38:51 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 15 19:38:51 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 15 19:38:51 symfony [info] {mailing_listActions} Call "mailing_listActions->executeIndex()"
+Dec 15 19:38:58 symfony [info] {sfPatternRouting} Match route "mailing_list" (/mailing_list) for /mailing_list with parameters array (  'module' => 'mailing_list',  'action' => 'index',)
+Dec 15 19:38:58 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 15 19:38:58 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 15 19:38:58 symfony [info] {mailing_listActions} Call "mailing_listActions->executeIndex()"
+Dec 15 19:39:02 symfony [info] {sfPatternRouting} Match route "mailing_list" (/mailing_list) for /mailing_list with parameters array (  'module' => 'mailing_list',  'action' => 'index',)
+Dec 15 19:39:02 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 15 19:39:02 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 15 19:39:02 symfony [info] {mailing_listActions} Call "mailing_listActions->executeIndex()"
+Dec 15 19:41:08 symfony [info] {sfPatternRouting} Match route "mailing_list" (/mailing_list) for /mailing_list with parameters array (  'module' => 'mailing_list',  'action' => 'index',)
+Dec 15 19:41:08 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 15 19:41:08 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 15 19:41:08 symfony [info] {mailing_listActions} Call "mailing_listActions->executeIndex()"
+Dec 15 19:41:09 symfony [info] {sfPatternRouting} Match route "mailing_list" (/mailing_list) for /mailing_list with parameters array (  'module' => 'mailing_list',  'action' => 'index',)
+Dec 15 19:41:09 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 15 19:41:09 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 15 19:41:09 symfony [info] {mailing_listActions} Call "mailing_listActions->executeIndex()"
+Dec 15 19:42:31 symfony [info] {sfPatternRouting} Match route "mailing_list" (/mailing_list) for /mailing_list with parameters array (  'module' => 'mailing_list',  'action' => 'index',)
+Dec 15 19:42:31 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 15 19:42:31 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 15 19:42:31 symfony [info] {mailing_listActions} Call "mailing_listActions->executeIndex()"
+Dec 15 19:42:32 symfony [info] {sfPatternRouting} Match route "mailing_list" (/mailing_list) for /mailing_list with parameters array (  'module' => 'mailing_list',  'action' => 'index',)
+Dec 15 19:42:32 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 15 19:42:32 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 15 19:42:32 symfony [info] {mailing_listActions} Call "mailing_listActions->executeIndex()"
+Dec 15 19:42:32 symfony [info] {sfPatternRouting} Match route "mailing_list" (/mailing_list) for /mailing_list with parameters array (  'module' => 'mailing_list',  'action' => 'index',)
+Dec 15 19:42:32 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 15 19:42:32 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 15 19:42:32 symfony [info] {mailing_listActions} Call "mailing_listActions->executeIndex()"

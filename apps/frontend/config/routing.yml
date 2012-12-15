@@ -1,6 +1,10 @@
 # You can find more information about this file on the symfony website:
 # http://www.symfony-project.org/reference/1_4/en/10-Routing
 
+mailing_list:
+  url: /mailing_list
+  param: { module: mailing_list, action: index }
+
 # default rules
 homepage:
   url:   /
