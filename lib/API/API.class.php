@@ -118,6 +118,8 @@ class SmRestAPI {
 
 	    curl_close($s);
 
+	    ChromePhp::log($url, json_decode($_out, true));
+
 	    switch ($status) 
 	    {
         	case self::HTTP_OK:
@@ -128,7 +130,7 @@ class SmRestAPI {
 	     		break;
 
         	default:
-
+        		
             	throw new Http_Exception("http error: {$status}", $status);
     	}	
 
@@ -164,6 +166,8 @@ class SmRestAPI {
 	     		break;
 
         	default:
+
+
 
             	throw new Http_Exception("http error: {$status}", $status);
     	}	

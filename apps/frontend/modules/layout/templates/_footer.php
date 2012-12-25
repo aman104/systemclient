@@ -9,8 +9,8 @@
 
 			<a href="<?php echo url_for('@mailing'); ?>">Mailingi</a><br />
 			<a href="<?php echo url_for('@mailing_list'); ?>">Listy mailingowe</a><br />
-			<a href="">Statystki</a><br />
-			<a href="">Płatności</a><br />
+			<a href="<?php echo url_for('@statistic'); ?>">Statystki</a><br />
+			<a href="<?php echo url_for('@user_payment'); ?>">Płatności</a><br />
 			<a href="<?php echo url_for('@user'); ?>">Profil</a><br />
 		</div>
 
@@ -19,7 +19,7 @@
 
 			<a href="<?php echo url_for('@mailing_new'); ?>">Utwórz nową kreacje mailingi</a><br />
 			<a href="<?php echo url_for('@mailing_list_new'); ?>">Utwórz nową listę</a><br />
-			<a href="">Doładuj konto</a><br />
+			<a href="<?php echo url_for('@user_payment'); ?>">Doładuj konto</a><br />
 			<a href="<?php echo url_for('@sf_guard_signout'); ?>">Wyloguj się</a><br />
 
 		</div>

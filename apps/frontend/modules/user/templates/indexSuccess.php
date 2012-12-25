@@ -1,5 +1,5 @@
 <div class="page-header">
-  <h2></h2>
+  <h2>Edycja profilu <small>zmień dane do faktury</small></h2>
 </div>
 
 <div class="content">
@@ -11,11 +11,23 @@
   <li class="active">Profil</li>
 </ul>
 
-<ul class="nav nav-list span2">
-  <li class="nav-header">List header</li>
-  <li class="active"><a href="#">Home</a></li>
-  <li><a href="#">Library</a></li> 
-</ul>
+<?php include_partial('user/menu', array('active' => 'profile')); ?>
+
+<div class="span9">
+
+	<form  method="post" action="<?php echo url_for('@user'); ?>">
+	<table class="table table-bordered table-striped">
+
+		<?php echo $form; ?>
+		<tr>
+			<td colspan="2">
+				<input type="submit" class="btn btn-primary" value="Zapisz" />
+			</td>
+		</tr>
+	</table>
+	</form>
+
+</div>
 
 <div style="clear: both"></div>
 

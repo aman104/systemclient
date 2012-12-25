@@ -2,6 +2,41 @@
 
 class UserForm extends sfForm
 {
+
+  private $action = 'add';
+
+
+  public function setAction($action)
+  {
+    if(in_array($action, array('add', 'edit')));
+    $this->action = $action;
+    if($this->action == 'edit')
+    {
+      unset($this['username']);
+      unset($this['email']);
+      unset($this['password']);
+      unset($this['password_again']);
+    }
+  }
+
+  public function getAction()
+  {
+    return $this->action;
+  }
+
+  public function setParamsDefaults($params)
+  {
+      $this->setDefault('first_name', $params['first_name']);
+      $this->setDefault('last_name', $params['last_name']);
+      $this->setDefault('street', $params['street']);
+      $this->setDefault('post_code', $params['post_code']);
+      $this->setDefault('city', $params['city']);
+      $this->setDefault('country', $params['country']);
+      $this->setDefault('phone', $params['phone']);
+      $this->setDefault('nip', $params['nip']);
+
+  }
+
   public function configure()
   {
 
@@ -27,15 +62,15 @@ class UserForm extends sfForm
   	$this->widgetSchema['first_name']->setLabel('Imię');
   	$this->validatorSchema['first_name'] = new sfValidatorString(array('required' => true));
 
-	$this->widgetSchema['last_name'] = new sfWidgetFormInputText();
+	  $this->widgetSchema['last_name'] = new sfWidgetFormInputText();
   	$this->widgetSchema['last_name']->setLabel('Nazwisko');
   	$this->validatorSchema['last_name'] = new sfValidatorString(array('required' => true));
 
-	$this->widgetSchema['street'] = new sfWidgetFormInputText();
+	  $this->widgetSchema['street'] = new sfWidgetFormInputText();
   	$this->widgetSchema['street']->setLabel('Ulica');  	
   	$this->validatorSchema['street'] = new sfValidatorString(array('required' => true));
 
-	$this->widgetSchema['post_code'] = new sfWidgetFormInputText();
+  	$this->widgetSchema['post_code'] = new sfWidgetFormInputText();
   	$this->widgetSchema['post_code']->setLabel('Kod pocztowy');  	
   	$this->validatorSchema['post_code'] = new sfValidatorString(array('required' => true));
 
@@ -47,7 +82,7 @@ class UserForm extends sfForm
   	$this->widgetSchema['country']->setLabel('Kraj');
   	$this->validatorSchema['country'] = new sfValidatorString(array('required' => true));
 
-	$this->widgetSchema['nip'] = new sfWidgetFormInputText();
+	  $this->widgetSchema['nip'] = new sfWidgetFormInputText();
   	$this->widgetSchema['nip']->setLabel('NIP');
   	$this->validatorSchema['nip'] = new sfValidatorString(array('required' => false));
 
@@ -60,14 +95,22 @@ class UserForm extends sfForm
   public function save()
   {
   	$values = $this->getValues();  	
-  	$return = SmUser::createUser($values);	 
-  	echo $return;
-  	$return2 = json_decode($return, true);
-  	var_dump($return2);
-  	exit;
-  	Tools::debug($return, true);
-  	exit;
+  	// $return = SmUser::createUser($values);	 
+  	// echo $return;
+  	// $return2 = json_decode($return, true);
+  	// var_dump($return2);
+  	// exit;
+  	// Tools::debug($return, true);
+  	// exit;
   	
+    if($this->getAction() == 'edit')
+    {
+      $response = SmUser::editUser($values);
+      $return = json_decode($response, true);
+    }
+
+    return $return;
+
   	// if(count($return) > 0)
   	// {
   	// 	$user = new sfGuardUser();

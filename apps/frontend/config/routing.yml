@@ -1,9 +1,36 @@
 # You can find more information about this file on the symfony website:
 # http://www.symfony-project.org/reference/1_4/en/10-Routing
 
+statistic:
+  url: /statistic
+  param: { module: statistic, action: index }
+
+
 user:
   url: /user
   param: { module: user, action: index }
+
+user_password:
+  url: /user/password
+  param: { module: user, action: password }
+
+user_emails:
+  url: /user/emails
+  param: { module: user, action: emails }
+
+user_verify:
+  url: /user/verify
+  param: { module: user, action: verify }
+
+user_payment:
+  url: /user/payment
+  param: { module: user, action: payment }
+
+user_invoice:
+  url: /user/invoice
+  param: { module: user, action: invoice }
+
+
 
 mailing:
   url: /mailing

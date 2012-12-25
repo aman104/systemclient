@@ -20,7 +20,7 @@
               	
             </ul>
             <p class="navbar-text pull-right">
-              Zalogowany jako <a href="#" class="navbar-link"><?php echo $sf_user->getGuardUser()->getUsername(); ?></a>              
+              Zalogowany jako <a href="<?php echo url_for('@user'); ?>" class="navbar-link"><?php echo $sf_user->getGuardUser()->getUsername(); ?></a>              
               <?php include_component('layout', 'points'); ?>
               &nbsp;
             </p>
@@ -28,8 +28,8 @@
 			  <li class=""><a href="<?php echo url_for('@homepage'); ?>"><i class="icon-home icon-white"></i>&nbsp; Strona główna</a></li>
 			  <li class=""><a href="<?php echo url_for('@mailing'); ?>"><i class="icon-envelope icon-white"></i>&nbsp; Mailingi</a></li>
 			  <li class=""><a href="<?php echo url_for('@mailing_list'); ?>"><i class="icon-list icon-white"></i>&nbsp; Listy mailingowe</a></li>
-			  <li class=""><a href="<?php echo url_for('@homepage'); ?>"><i class="icon-globe icon-white"></i>&nbsp; Statystyki</a></li>
-			  <li class=""><a href="<?php echo url_for('@homepage'); ?>"><i class="icon-shopping-cart icon-white"></i>&nbsp; Płatności</a></li>			  
+			  <li class=""><a href="<?php echo url_for('@statistic'); ?>"><i class="icon-globe icon-white"></i>&nbsp; Statystyki</a></li>
+			  <li class=""><a href="<?php echo url_for('@user_payment'); ?>"><i class="icon-shopping-cart icon-white"></i>&nbsp; Płatności</a></li>			  
 		  	</ul>      
           </div><!--/.nav-collapse -->
         </div>

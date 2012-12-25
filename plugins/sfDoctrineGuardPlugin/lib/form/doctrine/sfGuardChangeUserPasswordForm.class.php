@@ -15,5 +15,7 @@ class sfGuardChangeUserPasswordForm extends BasesfGuardChangeUserPasswordForm
    */
   public function configure()
   {
+  	$this->widgetSchema['password']->setLabel('Hasło');
+  	$this->widgetSchema['password_again']->setLabel('Powtórz hasło');
   }
 }

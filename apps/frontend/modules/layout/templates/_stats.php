@@ -5,4 +5,4 @@ Ilość adresów email: 100 <br />
 Ilość zweryfikowanych: 100 <br />
 Ilość utworzonych grup: 100 <br />
 Punkty do wykorzystania: 100 <br /><br />
-<a href="#" class="btn btn-mini">Przejdź do statystyk zaawansowanych</a>
+<a href="<?php echo url_for('@statistic'); ?>" class="btn btn-mini">Przejdź do statystyk zaawansowanych</a>
