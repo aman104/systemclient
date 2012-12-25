@@ -12,21 +12,81 @@ class mailing_listActions extends sfActions
 {
  
   public function executeIndex(sfWebRequest $request)
+  {   
+  	$response = SmMailingList::getMailingList();
+    $this->mailingLists = json_decode($response, true);
+  }
+
+  public function executeNew(sfWebRequest $request)
   {
-   
-  	$api_token = 'WWERV234523V@Vv2345n57345q3453';
-  	$api_secret = 'ERTNY567X4567$B56v34563456345n';
+    $this->form = new MailingListForm();
 
-  	$auth = new SmAuth($api_token, $api_secret);
+    if($request->isMethod('POST'))
+    {
+      $values = $request->getParameter('mailing_list');
+      $this->form->bind($values);
+      if($this->form->isValid())
+      {
+        $return = $this->form->save();
+        $this->getUser()->setFlash('notice', 'Lista mailingowa została dodana', true);
+        $this->redirect('mailing_list_show', array('hash' => $return['hash']));
+      }
+    }    
+  }
 
-  	SmModule::setAuth($auth);
-  	$response = SmMailingList::addMailingList('Nazwa testowa');
-  	echo $response;
-  	exit;
+  public function executeShow(sfWebRequest $request)
+  {
+    $hash = $request->getParameter('hash');
+    
+    $response = SmMailingList::getMailingList($hash);
+    $this->mailingList = json_decode($response, true);
 
-  	echo $auth->getApiSecret();
+    $response = SmEmail::getEmailsByHash($hash);
+    $this->emails = json_decode($response, true);
 
-  	//SmMailingList::
+  }
 
+  public function executeEdit(sfWebRequest $request)
+  {
+    $hash = $request->getParameter('hash');
+    $response = SmMailingList::getMailingList($hash);
+    $this->params = json_decode($response, true);
+
+    $this->form = new MailingListForm();    
+
+    if($request->isMethod('POST'))
+    {
+      $values = $request->getParameter('mailing_list');
+      //Tools::debug($values, true);
+      $this->form->bind($values);
+      if($this->form->isValid())
+      {
+        $return = $this->form->save();
+        $this->getUser()->setFlash('notice', 'Lista mailingowa została zedytowana', true);
+        $this->redirect('mailing_list_edit', array('hash' => $return['hash']));
+      }
+    }
+    else
+    {          
+      $this->form->setParamsDefaults($this->params);
+    }
+    
+  }
+
+  public function executeDelete(sfWebRequest $request)
+  {
+    $hash = $request->getParameter('hash');
+    $response = SmMailingList::deleteMailingList($hash); 
+    $this->getUser()->setFlash('notice', 'Lista mailingowa została usunięta', true);   
+
+    $this->redirect('mailing_list');
+  }
+
+  public function executeClear(sfWebRequest $request)
+  {
+    $hash = $request->getParameter('hash');
+    $response = SmMailingList::clearMailingList($hash);
+    $this->getUser()->setFlash('notice', 'Lista mailingowa została wyczyszczona', true);  
+    $this->redirect('mailing_list_show', array('hash' => $hash));
   }
 }

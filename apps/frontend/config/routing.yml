@@ -1,14 +1,106 @@
 # You can find more information about this file on the symfony website:
 # http://www.symfony-project.org/reference/1_4/en/10-Routing
 
+user:
+  url: /user
+  param: { module: user, action: index }
+
+mailing:
+  url: /mailing
+  param: { module: mailing, action: index }
+
+mailing_new:
+  url: /mailing/new
+  param: { module: mailing, action: new }
+
+mailing_edit:
+  url: /mailing/edit/:hash
+  param: { module: mailing, action: edit }
+
+mailing_run:
+  url: /mailing/run
+  param: { module: mailing, action: run }
+
+mailing_end:
+  url: /mailing/end
+  param: { module: mailing, action: end }
+
+mailing_set_run:
+  url: /mailing/set-run/:hash
+  param: { module: mailing, action: setRun }
+
+mailing_delete:
+  url: /mailing/delete/:hash
+  param: { module: mailing, action: delete }
+
+mailing_test:
+  url: /mailing/test/:hash
+  param: { module: mailing, action: test }
+
+
+email_new:
+  url: /email/new/:hash
+  param: { module: email, action: new }
+
+email_edit:
+  url: /email/edit/:hash
+  param: { module: email, action: edit }
+
+email_delete:
+  url: /email/delete/:hash
+  param: { module: email, action: delete }
+
+email_verify:
+  url: /email/verify/:hash
+  param: { module: email, action: verify }
+
+
+
+
 mailing_list:
   url: /mailing_list
   param: { module: mailing_list, action: index }
 
+mailing_list_new:
+  url: /mailing_list/new
+  param: { module: mailing_list, action: new }
+
+mailing_list_show:
+  url: /mailing_list/:hash
+  param: { module: mailing_list, action: show }
+
+mailing_list_edit:
+  url: /mailing_list/edit/:hash
+  param: { module: mailing_list, action: edit }
+
+mailing_list_delete:
+  url: /mailing_list/delete/:hash
+  param: { module: mailing_list, action: delete }
+
+mailing_list_clear:
+  url: /mailing_list_clear/:hash
+  param: { module: mailing_list, action: clear }
+
+
+
+
+
+sf_guard_signin:
+  url:   /login
+  param: { module: sfGuardAuth, action: signin }
+
+sf_guard_signout:
+  url:   /logout
+  param: { module: sfGuardAuth, action: signout }
+
+sf_guard_password:
+  url:   /request_password
+  param: { module: sfGuardAuth, action: password }
+
 # default rules
 homepage:
   url:   /
-  param: { module: default, action: index }
+  param: { module: homepage, action: index }
 
 # generic rules
 # please, remove them by adding more specific rules

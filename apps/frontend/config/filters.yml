@@ -6,5 +6,11 @@ security:  ~
 
 # insert your own filters here
 
+remember_me:
+  class: sfGuardRememberMeFilter
+
+sm_auth:
+  class: SmAuthRegisterFilter
+
 cache:     ~
 execution: ~

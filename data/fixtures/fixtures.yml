@@ -1,17 +1,11 @@
-# # Populate this file with data to be loaded by your ORM's *:data-load task.
-# # You can create multiple files in this directory (i.e. 010_users.yml,
-# # 020_articles.yml, etc) which will be loaded in alphabetical order.
-# # 
-# # See documentation for your ORM's *:data-load task for more information.
-# 
-# User:
-#   fabien:
-#     username: fabien
-#     password: changeme
-#     name:     Fabien Potencier
-#     email:    fabien.potencier@symfony-project.com
-#   kris:
-#     username: Kris.Wallsmith
-#     password: changeme
-#     name:     Kris Wallsmith
-#     email:    kris.wallsmith@symfony-project.com
+sfGuardUser:
+  pawel:
+    username: pawel
+    password: test
+    email_address:    psalajczyk@gmail.com
+
+Profile:
+  pawel_profile:
+    sfGuardUser: pawel
+    api_token: WWERV234523V@Vv2345n57345q3453
+    api_secret: ERTNY567X4567$B56v34563456345n

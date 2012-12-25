@@ -33,7 +33,7 @@ class SmAuth {
 
 	public function generateCsrf($params)
 	{
-		return md5('asdf');
+		return md5($this->getApiToken().'.'.$this->getApiSecret());
 	}
 
 }

@@ -1,0 +1,12 @@
+Profile:
+  columns:  
+    sf_guard_user_id: {type: integer, notnull: true}
+    api_token:        {type: string(255), notnull: true, unique: true}
+    api_secret: 	  {type: string(255), notnull: true, unique: true}
+  relations:
+    sfGuardUser:
+      type: one
+      foreignType: one
+      local: sf_guard_user_id
+      foreign: id
+      onDelete: CASCADE     

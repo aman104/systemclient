@@ -5,10 +5,28 @@
     <?php include_metas() ?>
     <?php include_title() ?>
     <link rel="shortcut icon" href="/favicon.ico" />
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
     <?php include_stylesheets() ?>
     <?php include_javascripts() ?>
   </head>
   <body>
-    <?php echo $sf_content ?>
+    <?php include_component('layout', 'menu'); ?>
+    <div class="container">
+
+      
+
+      <?php echo $sf_content ?>
+
+
+
+    </div>
+
+    <?php echo include_component('layout', 'footer'); ?>
+
   </body>
 </html>

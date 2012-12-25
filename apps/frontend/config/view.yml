@@ -6,15 +6,22 @@ default:
     content-type: text/html
 
   metas:
-    #title:        symfony project
-    #description:  symfony project
-    #keywords:     symfony, project
-    #language:     en
-    #robots:       index, follow
+    title:        System Mailingowy
+    description:  System Mailingowy
+    keywords:     System Mailingowy
+    language:     System Mailingowy
+    robots:       index, follow
 
-  stylesheets:    [main.css]
+  stylesheets:    
+    - bootstrap/bootstrap.min.css
+    - main.css
 
-  javascripts:    []
+  javascripts:    
+    - jQuery.js
+    - bootstrap/bootstrap.min.js
+    - bootstrap/bootstrap-dropdown.js
+    - main.js
+    - tiny_mce/tiny_mce.js
 
   has_layout:     true
   layout:         layout
