@@ -6,7 +6,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="#">System mailingowy</a>
+          <a class="brand" href="<?php echo url_for('@homepage'); ?>">System mailingowy</a>
           <div class="nav-collapse collapse">
             <ul class="nav pull-right">
               	<li class="dropdown">
@@ -21,7 +21,7 @@
             </ul>
             <p class="navbar-text pull-right">
               Zalogowany jako <a href="<?php echo url_for('@user'); ?>" class="navbar-link"><?php echo $sf_user->getGuardUser()->getUsername(); ?></a>              
-              <?php include_component('layout', 'points'); ?>
+              (<?php include_component('layout', 'points'); ?>)
               &nbsp;
             </p>
             <ul class="nav">

@@ -1,11 +1,11 @@
-sfGuardUser:
-  pawel:
-    username: pawel
-    password: test
-    email_address:    psalajczyk@gmail.com
+# sfGuardUser:
+#   pawel:
+#     username: pawel
+#     password: test
+#     email_address:    psalajczyk@gmail.com
 
-Profile:
-  pawel_profile:
-    sfGuardUser: pawel
-    api_token: WWERV234523V@Vv2345n57345q3453
-    api_secret: ERTNY567X4567$B56v34563456345n
+# Profile:
+#   pawel_profile:
+#     sfGuardUser: pawel
+#     api_token: WWERV234523V@Vv2345n57345q3453
+#     api_secret: ERTNY567X4567$B56v34563456345n

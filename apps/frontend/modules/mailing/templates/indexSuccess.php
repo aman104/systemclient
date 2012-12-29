@@ -40,9 +40,11 @@
 		</tr>
 		<?php $i++; endforeach; ?>
 	<?php else: ?>
+		<tr>
 		<td colspan="7">
 			<h2 class="t_center"><small>Brak kreacji mailingowych</small></h2>
 		</td>
+		</tr>
 	<?php endif; ?>
 </table>		
 

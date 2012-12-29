@@ -30,7 +30,13 @@ class sfGuardAuthActions extends BasesfGuardAuthActions
 			$this->registerForm->bind($values);
 			if($this->registerForm->isValid())
 			{
-				$this->registerForm->save();
+				$user = $this->registerForm->save();
+				if($user)
+				{
+					$this->getUser()->signIn($user);
+					$this->getUser()->setFlash('notice', 'Zostałeś zalogowany');
+					$this->redirect('@homepage');
+				}
 			}
 		}
 

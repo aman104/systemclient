@@ -40,6 +40,9 @@ class UserForm extends sfForm
   public function configure()
   {
 
+    $c = new sfCultureInfo('en');
+    $countries = $c->getCountries();
+    
   	$this->widgetSchema->setNameFormat('user[%s]');
 
   	$this->widgetSchema['username'] = new sfWidgetFormInputText();
@@ -50,11 +53,11 @@ class UserForm extends sfForm
   	$this->widgetSchema['email']->setLabel('Adres e-mail');
   	$this->validatorSchema['email'] = new sfValidatorEmail(array('required' => true));
 
-  	$this->widgetSchema['password'] = new sfWidgetFormInputText();
+  	$this->widgetSchema['password'] = new sfWidgetFormInputPassword();
   	$this->widgetSchema['password']->setLabel('Hasło');
   	$this->validatorSchema['password'] = new sfValidatorString(array('required' => true));
   	
-  	$this->widgetSchema['password_again'] = new sfWidgetFormInputText();
+  	$this->widgetSchema['password_again'] = new sfWidgetFormInputPassword();
   	$this->widgetSchema['password_again']->setLabel('Powtórz hasło');
   	$this->validatorSchema['password_again'] = new sfValidatorString(array('required' => true));
   	
@@ -78,7 +81,8 @@ class UserForm extends sfForm
   	$this->widgetSchema['city']->setLabel('Miasto');
   	$this->validatorSchema['city'] = new sfValidatorString(array('required' => true));
 
-  	$this->widgetSchema['country'] = new sfWidgetFormInputText();
+  	$this->widgetSchema['country'] = new sfWidgetFormSelect(array('choices' => $countries));
+
   	$this->widgetSchema['country']->setLabel('Kraj');
   	$this->validatorSchema['country'] = new sfValidatorString(array('required' => true));
 
@@ -90,46 +94,46 @@ class UserForm extends sfForm
   	$this->widgetSchema['phone']->setLabel('Telefon');
   	$this->validatorSchema['phone'] = new sfValidatorString(array('required' => false));
 
+    $this->setDefault('country','PL');
+
+    $this->mergePostValidator(new sfValidatorSchemaCompare('password', sfValidatorSchemaCompare::EQUAL, 'password_again', array(), array('invalid' => 'The two passwords must be the same.')));
+
   }
 
   public function save()
   {
-  	$values = $this->getValues();  	
-  	// $return = SmUser::createUser($values);	 
-  	// echo $return;
-  	// $return2 = json_decode($return, true);
-  	// var_dump($return2);
-  	// exit;
-  	// Tools::debug($return, true);
-  	// exit;
-  	
+  	$values = $this->getValues();  	 	
     if($this->getAction() == 'edit')
     {
       $response = SmUser::editUser($values);
       $return = json_decode($response, true);
     }
+    else
+    {
+      $response = SmUser::createUser($values);
+      $return = json_decode($response, true); 
+      if(count($return) > 0)
+      {
+       $user = new sfGuardUser();
+       $user->setUsername($return['username']);
+       $user->setEmailAddress($return['email']);
+       $user->setFirstName($return['first_name']);
+       $user->setLastName($return['last_name']);
+       $user->setPassword($values['password']);
+       $user->setIsActive(1);
+       $user->save();
+
+       $profile = new Profile();
+       $profile->setApiToken($return['api_token']);
+       $profile->setApiSecret($return['api_secret']);
+       $profile->setSfGuardUser($user);
+       $profile->save();
+       $return = $user;
+      }
+
+    }
 
     return $return;
-
-  	// if(count($return) > 0)
-  	// {
-  	// 	$user = new sfGuardUser();
-  	// 	$user->setUsername($return['username']);
-  	// 	$user->setEmailAddress($return['email']);
-  	// 	$user->setFirstName($return['fisrt_name']);
-  	// 	$user->setLastName($return['last_name']);
-  	// 	$user->setPassword($values['password']);
-  	// 	$user->setIsActive(1);
-  	// 	$user->save();
-
-  	// 	$profile = new Profile();
-  	// 	$profile->setApiToken($return['api_token']);
-  	// 	$profile->setApiSecret($return['api_secret']);
-  	// 	$profile->sfGuardUser($user);
-  	// 	$profile->save();
-  	// }
-
-  	// Tools::debug($return, true);
   }
 
 }

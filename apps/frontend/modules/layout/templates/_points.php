@@ -1,1 +1,1 @@
-(<?php echo $points; ?>)
+<?php echo $points; ?>
