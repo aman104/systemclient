@@ -24,7 +24,7 @@
 	</tr>
 	<tr>
 		<td>1.</td>
-		<td>Ilość adresówe mail</td>
+		<td>Liczba adresów e-mail</td>
 		<td>100</td>
 	</tr>
 </table>
@@ -37,11 +37,19 @@
 		<th>Link</th>
 		<th>Kliknięcia</th>
 	</tr>
+	<?php if(count($links)): ?>
+		<?php $i = 1; foreach($links as $link): ?>
+		<tr>
+			<td><?php echo $i++; ?>.</td>
+			<td><?php echo $link['source']; ?></td>
+			<td><?php echo $link['click']; ?></td>
+		</tr>
+		<?php endforeach; ?>
+	<?php else: ?>
 	<tr>
-		<td>1.</td>
-		<td>http://onet.pl</td>
-		<td>100</td>
+		<td colspan="2"><h2 class="t_center"><small>Brak adresów URL</small></h2></td>
 	</tr>
+	<?php endif; ?>
 </table>
 
 </div>

@@ -16,7 +16,7 @@
 		<th>Lp.</th>
 		<th style="width: 400px;">Nazwa</th>
 		<th>Status</th>
-		<th>Ilość otwartych</th>
+		<th>Liczba otwartych</th>
 		<th>Akcje</th>
 	</tr>
 	<?php if(count($mailings) > 0): ?>
