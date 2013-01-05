@@ -38,7 +38,7 @@ class layoutComponents extends sfComponents
 
 	public function executeStats(sfWebRequest $request)
 	{
-		
+
 	}
 
 

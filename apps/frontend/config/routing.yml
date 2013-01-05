@@ -1,9 +1,17 @@
 # You can find more information about this file on the symfony website:
 # http://www.symfony-project.org/reference/1_4/en/10-Routing
 
+payment:
+  url: /payment/add
+  param: { module: payment, action: add }
+
 statistic:
   url: /statistic
   param: { module: statistic, action: index }
+
+statistic_show:
+  url: /statistic/:hash
+  param: { module: statistic, action: show }
 
 
 user:

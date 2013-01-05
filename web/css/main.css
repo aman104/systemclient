@@ -50,3 +50,20 @@ ul, li {
 	margin: 0;
 	padding: 0;
 }
+
+#points-input {
+	width: 100px;
+	margin-left: 290px;
+	padding: 10px;
+	text-align: center;	
+}
+
+#points-submit {
+	margin-left: 293px;
+}
+
+#points-info {
+	text-align: center;
+	font-size: 14px;
+	margin-bottom: 10px;
+}

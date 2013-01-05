@@ -108,7 +108,8 @@ class userActions extends sfActions
 
   public function executeInvoice(sfWebRequest $request)
   {
-  	
+  	 $response = SmPayment::getPayment();
+     $this->payments = json_decode($response, true);
   }
 
 }

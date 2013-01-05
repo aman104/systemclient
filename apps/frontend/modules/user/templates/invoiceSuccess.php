@@ -16,7 +16,44 @@
 
 <div class="span9">
 
-	
+	<table class="table table-bordered table-striped">
+		<tr>
+			<th>Lp.</th>
+			<th>Punkty</th>
+			<th>Kwota</th>
+			<th>Status</th>
+			<th>Faktura</th>
+			<th>Data</th>
+		</tr>
+		<?php if(count($payments) > 0): ?>
+			<?php $i = 1; foreach($payments as $payment): ?>
+				<tr>
+					<td><?php echo $i++; ?>.</td>
+					<td><?php echo $payment['points']; ?></td>
+					<td><?php echo Tools::getPrice($payment['price']); ?> <?php echo $payment['symbol']; ?></td>
+					<td>
+
+						<?php
+							switch($payment['status'])
+							{
+								case 1 : echo '<span class="badge badge-warning">Nie opłacone</span>'; break;
+								case 9 : echo '<span class="badge badge-success">Opłacone</span>'; break;
+							}
+						?>
+
+					</td>
+					<td><?php echo $payment['invoice_id']; ?></td>
+					<td><?php echo $payment['created_at']; ?></td>
+				</tr>
+			<?php endforeach; ?>
+		<?php else: ?>
+			<tr>
+				<td colspan="6">
+					<h2 class="t_center"><small>Nie masz jeszcze żadnych wpłat</small></h2>
+				</td>
+			</tr>
+		<?php endif; ?>
+	</table>
 
 </div>
 

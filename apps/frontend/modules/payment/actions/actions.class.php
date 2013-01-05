@@ -10,13 +10,18 @@
  */
 class paymentActions extends sfActions
 {
- /**
-  * Executes index action
-  *
-  * @param sfRequest $request A request object
-  */
-  public function executeIndex(sfWebRequest $request)
+ 
+  public function executeAdd(sfWebRequest $request)
   {
-    $this->forward('default', 'module');
+ 	$points = (int)$request->getParameter('points');   
+ 	if($points > 0)
+ 	{
+ 		$payment = SmPayment::addPayment($points);
+ 		$this->redirect('user_invoice');
+ 	}
+ 	else
+ 	{
+ 		$this->redirect('user_payment');
+ 	}
   }
 }

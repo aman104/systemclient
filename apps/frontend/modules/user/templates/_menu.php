@@ -18,11 +18,11 @@
   </li>
 
   <li <?php echo ($active == 'payment') ? 'class="active"' : ''; ?>>
-  	<a href="<?php echo url_for('@user_payment'); ?>"><i class="icon-shopping-cart"></i>&nbsp; Płatności</a>
+  	<a href="<?php echo url_for('@user_payment'); ?>"><i class="icon-shopping-cart"></i>&nbsp; Doładuj konto</a>
   </li>
 
   <li <?php echo ($active == 'invoice') ? 'class="active"' : ''; ?>>
-  	<a href="<?php echo url_for('@user_invoice'); ?>"><i class="icon-file"></i>&nbsp; Faktury</a>
+  	<a href="<?php echo url_for('@user_invoice'); ?>"><i class="icon-file"></i>&nbsp; Wpłaty i faktury</a>
   </li>
   
   <li>

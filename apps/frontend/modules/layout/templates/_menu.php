@@ -29,7 +29,7 @@
 			  <li class=""><a href="<?php echo url_for('@mailing'); ?>"><i class="icon-envelope icon-white"></i>&nbsp; Mailingi</a></li>
 			  <li class=""><a href="<?php echo url_for('@mailing_list'); ?>"><i class="icon-list icon-white"></i>&nbsp; Listy mailingowe</a></li>
 			  <li class=""><a href="<?php echo url_for('@statistic'); ?>"><i class="icon-globe icon-white"></i>&nbsp; Statystyki</a></li>
-			  <li class=""><a href="<?php echo url_for('@user_payment'); ?>"><i class="icon-shopping-cart icon-white"></i>&nbsp; Płatności</a></li>			  
+			  <li class=""><a href="<?php echo url_for('@user_payment'); ?>"><i class="icon-shopping-cart icon-white"></i>&nbsp; Doładuj konto</a></li>			  
 		  	</ul>      
           </div><!--/.nav-collapse -->
         </div>
