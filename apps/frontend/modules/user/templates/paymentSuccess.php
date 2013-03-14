@@ -73,7 +73,7 @@
 
 	<br />
 
-	<h4 class="t_center">Tabela pricingowa</h4>
+	<h4 class="t_center">Cennik</h4>
 
 	<table class="table table-bordered table-striped">
 		<tr>

@@ -36,7 +36,7 @@
 						<?php
 							switch($payment['status'])
 							{
-								case 1 : echo '<span class="badge badge-warning">Nie opłacone</span>'; break;
+								case 1 : echo '<span class="badge badge-warning">Nieopłacone</span>'; break;
 								case 9 : echo '<span class="badge badge-success">Opłacone</span>'; break;
 							}
 						?>
