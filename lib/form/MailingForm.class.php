@@ -30,6 +30,14 @@ class MailingForm extends sfForm
   		$this->widgetSchema['title']->setLabel('Tytuł kreacji');
   		$this->validatorSchema['title'] = new sfValidatorString(array('required' => true));
 
+  		$this->widgetSchema['name_from'] = new sfWidgetFormInputText(array(), array('style' => 'width: 400px;'));
+  		$this->widgetSchema['name_from']->setLabel('Nadawca (nazwa)');
+  		$this->validatorSchema['name_from'] = new sfValidatorString(array('required' => true));
+
+  		$this->widgetSchema['email_from'] = new sfWidgetFormInputText(array(), array('style' => 'width: 400px;'));
+  		$this->widgetSchema['email_from']->setLabel('Nadawca (email)');
+  		$this->validatorSchema['email_from'] = new sfValidatorEmail(array('required' => true));
+
   		$this->widgetSchema['html'] = new sfWidgetFormTextareaTinyMCE(array(), array('style' => 'width: 800px; height: 300px;'));
   		$this->widgetSchema['html']->setLabel('Wiadomość HTML');
   		$this->validatorSchema['html'] = new sfValidatorString(array('required' => true));
@@ -37,6 +45,10 @@ class MailingForm extends sfForm
   		$this->widgetSchema['text'] = new sfWidgetFormTextarea(array(), array('style' => 'width: 800px; height: 300px;'));
   		$this->widgetSchema['text']->setLabel('Wiadomość tekstowa');
   		$this->validatorSchema['text'] = new sfValidatorString(array('required' => true));
+
+      $this->widgetSchema['css'] = new sfWidgetFormTextarea(array(), array('style' => 'width: 800px; height: 300px;'));
+      $this->widgetSchema['css']->setLabel('Własne style CSS');
+      $this->validatorSchema['css'] = new sfValidatorString(array('required' => false));
 
   		$choices =  $this->getMailingListChoices();
 
@@ -66,6 +78,10 @@ class MailingForm extends sfForm
 		$this->setDefault('title', $params['title']);
 		$this->setDefault('html', $params['html']);
 		$this->setDefault('text', $params['text']);
+    $this->setDefault('css', $params['css']);
+
+		$this->setDefault('name_from', $params['name_from']);
+		$this->setDefault('email_from', $params['email_from']);
 
 		$this->setDefault('hash', $params['hash']);
 

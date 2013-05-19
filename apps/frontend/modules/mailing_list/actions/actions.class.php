@@ -17,6 +17,31 @@ class mailing_listActions extends sfActions
     $this->mailingLists = json_decode($response, true);
   }
 
+  public function executeImport(sfWebRequest $request)
+  { 
+    $hash = $request->getParameter('hash');
+    
+    $response = SmMailingList::getMailingList($hash);
+    $this->mailingList = json_decode($response, true);
+
+    $this->form = new MailingListImportForm();
+    $this->form->setMailingList($hash);
+
+    if($request->isMethod('POST'))
+    {
+      $values = $request->getParameter('mailing_list');
+      $this->form->bind($values, $request->getFiles('mailing_list'));
+      if($this->form->isValid())
+      {
+        $return = $this->form->save();
+        $this->getUser()->setFlash('notice', 'Adresy e-mail zostały zaimportowane', true);
+        $this->redirect('mailing_list_show', array('hash' => $hash));
+      }
+    }    
+
+
+  }
+
   public function executeNew(sfWebRequest $request)
   {
     $this->form = new MailingListForm();

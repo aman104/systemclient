@@ -1,6 +1,11 @@
 # You can find more information about this file on the symfony website:
 # http://www.symfony-project.org/reference/1_4/en/10-Routing
 
+
+debug:
+  url: /debug
+  param: { module: debug, action: debug }
+
 payment:
   url: /payment/add
   param: { module: payment, action: add }
@@ -108,12 +113,16 @@ mailing_list_edit:
   url: /mailing_list/edit/:hash
   param: { module: mailing_list, action: edit }
 
+mailing_list_import:
+  url: /mailing_list/import/:hash
+  param: { module: mailing_list, action: import }
+
 mailing_list_delete:
   url: /mailing_list/delete/:hash
   param: { module: mailing_list, action: delete }
 
 mailing_list_clear:
-  url: /mailing_list_clear/:hash
+  url: /mailing_list/clear/:hash
   param: { module: mailing_list, action: clear }
 
 

@@ -30,7 +30,9 @@ class statisticActions extends sfActions
 
     $response = SmStatistic::getLinks($this->mailing['hash']);
     $this->links = json_decode($response, true);
-    //Tools::debug($this->links, true);
+
+    $response = SmStatistic::getEmails($this->mailing['hash'], false);
+    $this->emails = json_decode($response, true);
 
   }
 }

@@ -18,7 +18,7 @@
 	<tr>
 		<th>Lp.</th>
 		<th style="width: 300px;">Tytuł</th>		
-		<th>Dada zakończenia</th>
+		<th>Data zakończenia</th>
 		<th>Czas trwania</th>
 		<th>Akcje</th>
 	</tr>
@@ -26,12 +26,16 @@
 		<?php $i = 1; foreach($mailings as $mailing): ?>
 		<tr class="tr_<?php echo $i; ?>">
 			<td><?php echo $i; ?>.</td>
-			<td><?php echo $mailing['title']; ?></td>
+			<td><a href="<?php echo url_for('statistic_show', array('hash' =>$mailing['hash'])); ?>"><?php echo $mailing['title']; ?></a></td>
 			<td><?php echo $mailing['time_end']; ?></td>
-			<td></td>	
+			<td>
+
+				<?php echo Tools::CalcDiff(strtotime($mailing['time_end']),strtotime($mailing['time_start'])); ?>
+
+			</td>	
 			<td>
 				<div class="btn-group">				
-					<a href="<?php //echo url_for('mailing_list_show', array('hash' =>$list['hash'])); ?>" class="btn btn-info btn-mini">Podsumowanie</a>				
+					<a href="<?php echo url_for('statistic_show', array('hash' =>$mailing['hash'])); ?>" class="btn btn-info btn-mini">Podsumowanie</a>				
 					<a href="<?php echo url_for('mailing_delete', array('hash' => $mailing['hash'])); ?>" class="btn btn-danger btn-mini" onclick="if (confirm('Na pewno chcesz usunąć kreację mailingową?')) { return true} else {return false; }">Usuń</a>
 				</div>
 			</td>		

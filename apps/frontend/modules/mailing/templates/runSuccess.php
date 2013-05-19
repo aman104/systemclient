@@ -13,27 +13,57 @@
 </ul>
 
 <?php include_component('mailing', 'tabs', array('active' => 2)); ?>
-
+<?php echo $mailing['MailingEmails']; ?>
 
 <table class="table table-bordered table-striped">
 	<tr>
-		<th>Lp.</th>
+		<th style="width: 20px;">Lp.</th>
 		<th style="width: 300px;">Tytuł</th>		
-		<th>Dada rozpoczęnia</th>
-		<th>Ilość adresów</th>
-		<th>Postęp</th>
+		<th style="width: 150px;">Data rozpoczęnia</th>
+		<th style="text-align: center; width: 100px;">Ilość adresów</th>
+		<th style="text-align: center;">Postęp</th>
 	</tr>
 	<?php if(count($mailings) > 0): ?>
 		<?php $i = 1; foreach($mailings as $mailing): ?>
-		<tr class="tr_<?php echo $i; ?>">
+		<tr id="tr-<?php echo $mailing['hash']; ?>" class="tr_<?php echo $i; ?>">
 			<td><?php echo $i; ?>.</td>
 			<td><?php echo $mailing['title']; ?></td>
 			<td><?php echo $mailing['time_start']; ?></td>
-			<td><?php echo $mailing['MailingEmails']; ?></td>
+			<td style="text-align: center;"><?php echo $mailing['MailingEmails']; ?></td>
 			<td>
 				<div class="progress progress-striped active">
-				  <div class="bar" style="width: 40%;"></div>
+				  <div id="bar-<?php echo $mailing['hash']; ?>"class="bar" data-emails="<?php echo $mailing['MailingEmails']; ?>" style="width: 0%;"></div>
 				</div>
+
+				<script>
+				$(function() {
+					setInterval(function() {
+      	
+						$.ajax({
+				  			url: 'http://systemcore.sf.pl/mailingrun/<?php echo $mailing["hash"]; ?>',
+				  			async: false,
+							cache: false,
+							type: "GET",
+							success: function(sData){
+								var sendEmails = parseInt(sData, 10);
+								var $bar = $('#bar-<?php echo $mailing["hash"]; ?>');
+								var allEmails = parseInt($bar.data('emails'), 10);
+								var pr = parseInt((sendEmails / allEmails) * 100, 10);
+								console.log(pr);
+								if(pr == 100)
+								{
+									$('#bar-<?php echo $mailing["hash"]; ?>').addClass('bar-success');
+								}
+								$bar.css('width', pr+'%');
+							}
+				  		});
+
+					}, 1000);
+				});
+
+				
+				</script>
+
 			</td>
 		</tr>
 		<?php $i++; endforeach; ?>

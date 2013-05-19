@@ -106,7 +106,15 @@ class mailingActions extends sfActions
     $hash = $request->getParameter('hash');
     $response = SmMailing::testMailing($hash);
     $this->mailing = json_decode($response, true);
-    $this->getUser()->setFlash('notice', 'Test został wysłany', true);
+
+    if(count($this->mailing) > 1)
+    {
+      $this->getUser()->setFlash('notice', 'Test został wysłany', true);  
+    }
+    else
+    {
+      $this->getUser()->setFlash('error', 'Musisz skonfigurować adresy e-mail do wysyłki testowej', true);     
+    }
     $this->redirect($request->getReferer());
   }
 }

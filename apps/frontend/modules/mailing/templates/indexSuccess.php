@@ -18,8 +18,8 @@
 	<tr>
 		<th>Lp.</th>
 		<th style="width: 300px;">Tytuł</th>		
-		<th>Dada dodania</th>
-		<th>Dada modyfikacji</th>
+		<th>Data dodania</th>
+		<th>Data modyfikacji</th>
 		<th>Akcje</th>
 	</tr>
 	<?php if(count($mailings) > 0): ?>

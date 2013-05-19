@@ -31,13 +31,13 @@
 					<td><?php echo $i++; ?>.</td>
 					<td><?php echo $payment['points']; ?></td>
 					<td><?php echo Tools::getPrice($payment['price']); ?> <?php echo $payment['symbol']; ?></td>
-					<td>
+					<td style="text-align: center;">
 
 						<?php
 							switch($payment['status'])
 							{
 								case 1 : echo '<span class="badge badge-warning">Nieopłacone</span>'; break;
-								case 9 : echo '<span class="badge badge-success">Opłacone</span>'; break;
+								case 2 : echo '<span class="badge badge-success">Opłacone</span>'; break;
 							}
 						?>
 

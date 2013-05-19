@@ -16,8 +16,14 @@ class paymentActions extends sfActions
  	$points = (int)$request->getParameter('points');   
  	if($points > 0)
  	{
- 		$payment = SmPayment::addPayment($points);
- 		$this->redirect('user_invoice');
+ 		$response = SmPayment::addPayment($points);
+ 		$payment = json_decode($response, true);
+
+ 		$paypal = new PayPalPayment($payment);
+ 		$url = $paypal->getUrl();
+
+ 		$this->redirect($url);
+
  	}
  	else
  	{

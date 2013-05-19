@@ -16,22 +16,38 @@
     <li class="active"><a href="#tab1" data-toggle="tab">Dane podstawowe</a></li>
     <li><a href="#tab2" data-toggle="tab">Wiadomość HTML</a></li>
     <li><a href="#tab3" data-toggle="tab">Wiadomość tekstowa</a></li>
+    <li><a href="#tab4" data-toggle="tab">CSS</a></li>
   </ul>
   <div class="tab-content">
     <div class="tab-pane active" id="tab1">
       <table class="table table-bordered table-striped">
       	<?php echo $form['title']->renderRow(); ?>
+        <?php echo $form['name_from']->renderRow(); ?>
+        <?php echo $form['email_from']->renderRow(); ?>
       	<?php echo $form['mailing_list']->renderRow(); ?>
       </table>
     </div>
     <div class="tab-pane" id="tab2">
+      <div class="well">
+        <ul>
+          <li><strong>{preview_link}</strong> - link do podglądu wiadomości w przeglądarce</li>
+          <li><strong>{delete_link}</strong> - link do wypisania sie z listy mailingowej</li>
+          <li><strong>{person}</strong> - nazwa adresata / e-mail</li>
+        </ul>
+      </div>
       <table class="table table-bordered table-striped">
       	<?php echo $form['html']->renderRow(); ?>
       </table>
     </div>
     <div class="tab-pane" id="tab3">
+
       <table class="table table-bordered table-striped">
       	<?php echo $form['text']->renderRow(); ?>
+      </table>
+    </div>
+    <div class="tab-pane" id="tab4">
+      <table class="table table-bordered table-striped">
+        <?php echo $form['css']->renderRow(); ?>
       </table>
     </div>
   </div>

@@ -16,7 +16,15 @@
 
 <div class="span9">
 
+	<div class="well">
+        <ul>
+          <li><strong>{verify_link}</strong> - link do potwierdzenia adresu e-mail</li>
+          <li><strong>{delete_link}</strong> - link do wypisania sie z listy mailingowej</li>
+        </ul>
+      </div>
+
 	<form  method="post" action="<?php echo url_for('@user_verify'); ?>">
+
 	<table class="table table-bordered table-striped">
 
 		<?php echo $form; ?>

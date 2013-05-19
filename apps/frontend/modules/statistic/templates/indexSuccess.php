@@ -33,10 +33,15 @@
 					}
 				 ?>
 			</td>
-			<td>//TODO</td>
+			<td>
+				<?php
+					$response = SmStatistic::getEmails($mailing['hash'], 4);
+    				echo count(json_decode($response, true));
+    			?>
+			</td>
 			<td>
 				<div class="btn-group">
-					<a href="<?php echo url_for('statistic_show', array('hash' =>$mailing['hash'])); ?>" class="btn btn-info btn-mini">Podglad</a>												
+					<a href="<?php echo url_for('statistic_show', array('hash' =>$mailing['hash'])); ?>" class="btn btn-info btn-mini">Podgląd</a>												
 				</div>
 			</td>
 		</tr>

@@ -118,8 +118,6 @@ class SmRestAPI {
 
 	    curl_close($s);
 
-	    ChromePhp::log($url, json_decode($_out, true));
-
 	    switch ($status) 
 	    {
         	case self::HTTP_OK:

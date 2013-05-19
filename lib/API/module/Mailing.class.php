@@ -10,6 +10,9 @@ class SmMailing extends SmModule {
 		$params['title'] = $_params['title'];
 		$params['html'] = $_params['html'];
 		$params['text'] = $_params['text'];
+		$params['css'] = $_params['css'];
+		$params['name_from'] = $_params['name_from'];
+		$params['email_from'] = $_params['email_from'];
 		$params['mailing_list'] = $_params['mailing_list'];
 		$params['status'] = $status;
 
@@ -24,6 +27,9 @@ class SmMailing extends SmModule {
 		$params['title'] = $_params['title'];
 		$params['html'] = $_params['html'];
 		$params['text'] = $_params['text'];
+		$params['css'] = $_params['css'];
+		$params['name_from'] = $_params['name_from'];
+		$params['email_from'] = $_params['email_from'];
 		$params['mailing_list'] = $_params['mailing_list'];
 		$params['status'] = $status;
 

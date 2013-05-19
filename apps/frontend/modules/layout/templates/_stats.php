@@ -1,8 +1,8 @@
-Liczba wysłanych mailingów: 0 <br />
-Liczba wysłanych maili: 0 <br />
-Liczba otwartych maili: 0 <br />
-Liczba adresów email: 100 <br />
-Liczba zweryfikowanych: 100 <br />
-Liczba utworzonych grup: 100 <br />
-Punkty do wykorzystania: 100 <br /><br />
+Liczba wysłanych mailingów: <?php echo $stats['ended']; ?> <br />
+Liczba wysłanych maili: <?php echo $stats['sended_emails']; ?> <br />
+Liczba otwartych maili: <?php echo $stats['opened_emails']; ?> <br />
+Liczba adresów email: <?php echo $stats['emails']; ?> <br />
+
+Liczba utworzonych grup: <?php echo $stats['mailing_list']; ?> <br />
+Punkty do wykorzystania: <?php echo $stats['points']; ?> <br /><br />
 <a href="<?php echo url_for('@statistic'); ?>" class="btn btn-mini">Przejdź do statystyk zaawansowanych</a>

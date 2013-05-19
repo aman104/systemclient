@@ -25,7 +25,22 @@
 	<tr>
 		<td>1.</td>
 		<td>Liczba adresów e-mail</td>
-		<td>100</td>
+		<td><?php echo $mailing['emails']; ?></td>
+	</tr>
+	<tr>
+		<td>2.</td>
+		<td>Data uruchomienia</td>
+		<td><?php echo $mailing['time_start']; ?></td>
+	</tr>
+	<tr>
+		<td>3.</td>
+		<td>Data zakończenia</td>
+		<td><?php echo $mailing['time_end']; ?></td>
+	</tr>
+	<tr>
+		<td>4.</td>
+		<td>Czas trwania</td>
+		<td><?php echo Tools::CalcDiff(strtotime($mailing['time_end']),strtotime($mailing['time_start'])); ?></td>
 	</tr>
 </table>
 
@@ -47,7 +62,7 @@
 		<?php endforeach; ?>
 	<?php else: ?>
 	<tr>
-		<td colspan="2"><h2 class="t_center"><small>Brak adresów URL</small></h2></td>
+		<td colspan="3"><h2 class="t_center"><small>Brak adresów URL</small></h2></td>
 	</tr>
 	<?php endif; ?>
 </table>
@@ -64,11 +79,25 @@
 		<th>Adres e-amil</th>
 		<th>Status</th>
 	</tr>
+	<?php $i = 1; foreach($emails as $email): ?>
 	<tr>
-		<td>1.</td>
-		<td>adres@email.pl</td>
-		<td><span class="badge badge-info">Otwarte</span></td>
+		<td><?php echo $i++; ?></td>
+		<td><?php echo $email['email'] ?></td>
+		<td>
+			<?php 
+			switch($email['Mailing2Email'][0]['status']) 
+			{
+				case 1 : echo '<span class="badge">Oczekuje</span>'; break;
+				case 2 : echo '<span class="badge badge-info">Wysłane</span>'; break;
+				case 3 : echo '<span class="badge badge-warning">Rezygnacja</span>'; break;
+				case 4 : echo '<span class="badge badge-success">Otwarte</span>'; break;
+				case 5 : echo '<span class="badge badge-important">Odbicie miękkie</span>'; break;
+				case 6 : echo '<span class="badge badge-inverse">Odbicie twarde</span>'; break;
+			} 
+			?>
+		</td>
 	</tr>
+	<?php endforeach; ?>
 </table>
 
 </div>

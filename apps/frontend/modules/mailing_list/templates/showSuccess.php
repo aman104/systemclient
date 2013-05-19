@@ -58,7 +58,7 @@
 </table>	
 
 <a href="<?php echo url_for('email_new', array('hash' => $mailingList['hash'])); ?>" class="btn btn-primary"><i class="icon-plus icon-white"></i>&nbsp; Dodaj adres</a>
-<a href="<?php echo url_for('mailing_list_new'); ?>" class="btn btn-primary"><i class="icon-upload icon-white"></i>&nbsp; Importuj</a>
+<a href="<?php echo url_for('mailing_list_import', array('hash' => $mailingList['hash'])); ?>" class="btn btn-primary"><i class="icon-upload icon-white"></i>&nbsp; Importuj</a>
 <a onclick="if (confirm('Na pewno chcesz usunąć wszystkie adresy e-mail z tej grupy?')) { return true} else {return false; }" href="<?php echo url_for('mailing_list_clear', array('hash' => $mailingList['hash'])); ?>" class="btn btn-danger"><i class="icon-remove icon-white"></i>&nbsp; Wyczyść</a>
 
 </div>
