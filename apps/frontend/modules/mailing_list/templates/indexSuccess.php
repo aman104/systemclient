@@ -76,7 +76,7 @@ $('.toogleModal').on('click', function() {
 	var name = $('#name_' + cl).text();
 	var hash = $('#hash_' + cl).text();
 
-	var formtext = '<form method=\"post\" action=\"http://api.send24mail.pl/add_subscriber\">\r\n<input type=\"hidden\" name=\"sm_mailing_list_hash\" value=\"'+hash+'\">\r\n<input type=\"text\" name=\"sm_email\" id=\"sm_email\">\r\n<input type=\"submit\" value=\"Zapisz się\">\r\n</form>';
+	var formtext = '<form method=\"post\" action=\"http://api.sendmail24.pl/add_subscriber\">\r\n<input type=\"hidden\" name=\"sm_mailing_list_hash\" value=\"'+hash+'\">\r\n<input type=\"text\" name=\"sm_email\" id=\"sm_email\">\r\n<input type=\"submit\" value=\"Zapisz się\">\r\n</form>';
 
 	$('#myModalLabel').html(name);
 	$('.modal-body textarea').val(formtext);

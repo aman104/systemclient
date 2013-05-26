@@ -5,9 +5,9 @@ class PayPalPayment
 	private $payment = false;
 	private $bussines = 'psalajczyk-facilitator@gmail.com';
 
-	private $return = 'http://systemcore.sf.pl/';
-	private $cancel_return = 'http://systemcore.sf.pl/';
-	private $notify_url = 'http://systemcore.sf.pl/';
+	private $return = 'http://api.sendmail24.pl/';
+	private $cancel_return = 'http://api.sendmail24.pl/';
+	private $notify_url = 'http://api.sendmail24.pl/';
 
 	public function __construct($payment, $user)
 	{

@@ -2,7 +2,7 @@
 
 class SmRestAPI {
 
-	private static $host = 'http://systemcore.sf.pl';
+	private static $host = 'http://api.sendmail24.pl';
 	
 	const POST   = 'POST';	
 	const GET    = 'GET';

@@ -40,7 +40,7 @@
 					setInterval(function() {
       	
 						$.ajax({
-				  			url: 'http://api.send24mail.pl/mailingrun/<?php echo $mailing["hash"]; ?>',
+				  			url: 'http://api.sendmail24.pl/mailingrun/<?php echo $mailing["hash"]; ?>',
 				  			async: false,
 							cache: false,
 							type: "GET",
