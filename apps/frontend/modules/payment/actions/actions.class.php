@@ -30,4 +30,14 @@ class paymentActions extends sfActions
  		$this->redirect('user_payment');
  	}
   }
+
+  public function executeDownload(sfWebRequest $request)
+  {
+  	$hash = $request->getParameter('payment');
+  	$response = SmPayment::downloadInvoice($hash);
+	$url = json_decode($response, true);
+	$this->redirect($url);
+  	exit;
+  }
+
 }

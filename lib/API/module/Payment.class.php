@@ -25,4 +25,17 @@ class SmPayment extends SmModule {
 		return $connect->execGet(self::$url, $params);	
 	}
 
+	public static function downloadInvoice($hash = null)
+	{		
+		$params = array();
+		if($hash)
+		{
+			$params['hash'] = $hash;
+			$params['method'] = 'download';	
+		}
+
+		$connect = SmRestAPI::connect(parent::getAuth());
+		return $connect->execGet(self::$url, $params);	
+	}	
+
 }

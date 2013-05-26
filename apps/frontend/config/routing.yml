@@ -6,6 +6,10 @@ debug:
   url: /debug
   param: { module: debug, action: debug }
 
+invoice_download:
+  url: /invoice/download
+  param: { module: payment, action: download }
+
 payment:
   url: /payment/add
   param: { module: payment, action: add }

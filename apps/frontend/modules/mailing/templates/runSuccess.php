@@ -40,7 +40,7 @@
 					setInterval(function() {
       	
 						$.ajax({
-				  			url: 'http://systemcore.sf.pl/mailingrun/<?php echo $mailing["hash"]; ?>',
+				  			url: 'http://api.send24mail.pl/mailingrun/<?php echo $mailing["hash"]; ?>',
 				  			async: false,
 							cache: false,
 							type: "GET",

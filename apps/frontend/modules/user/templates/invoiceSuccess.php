@@ -42,7 +42,13 @@
 						?>
 
 					</td>
-					<td><?php echo $payment['invoice_id']; ?></td>
+					<td style="text-align: center;">
+						<?php if($payment['invoice_id'] > 0): ?>
+							<a target="_blank" href="<?php echo url_for('invoice_download'); ?>?payment=<?php echo $payment['hash']; ?>" class="btn"><i class="icon-download-alt"></i></a>
+						<?php else: ?>
+							-
+						<?php endif; ?>
+					</td>
 					<td><?php echo $payment['created_at']; ?></td>
 				</tr>
 			<?php endforeach; ?>
