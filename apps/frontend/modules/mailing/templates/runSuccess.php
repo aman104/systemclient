@@ -49,7 +49,6 @@
 								var $bar = $('#bar-<?php echo $mailing["hash"]; ?>');
 								var allEmails = parseInt($bar.data('emails'), 10);
 								var pr = parseInt((sendEmails / allEmails) * 100, 10);
-								console.log(pr);
 								if(pr == 100)
 								{
 									$('#bar-<?php echo $mailing["hash"]; ?>').addClass('bar-success');

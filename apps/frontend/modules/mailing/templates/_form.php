@@ -32,7 +32,6 @@
         <ul>
           <li><strong>{preview_link}</strong> - link do podglądu wiadomości w przeglądarce</li>
           <li><strong>{delete_link}</strong> - link do wypisania sie z listy mailingowej</li>
-          <li><strong>{person}</strong> - nazwa adresata / e-mail</li>
         </ul>
       </div>
       <table class="table table-bordered table-striped">
